@@ -30,6 +30,7 @@ window.addEventListener('load', function () {
     // Pencil tool instance.
     tool = new tool_pencil();
 
+
     // Attach the mousedown, mousemove and mouseup event listeners.
     canvas.addEventListener('mousedown', ev_canvas, false);
     canvas.addEventListener('mousemove', ev_canvas, false);
@@ -57,6 +58,8 @@ window.addEventListener('load', function () {
       if (tool.started) {
         context.lineTo(ev._x, ev._y);
         context.stroke();
+        context.strokeStyle = 'red'
+        context.lineWidth = 10;
       }
     };
 
