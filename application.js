@@ -1,6 +1,23 @@
 /* © 2009 ROBO Design
  * http://www.robodesign.ro
  */
+ $(document).ready(function() {
+    $(".button").on("click", function(){
+      event.preventDefault()
+        var canvas = document.getElementById("imageView");
+        // line 12 returns user's image as dataURI... could just send to server
+        // and save in DB
+        var image = canvas.toDataURL("image/jpeg", 1.0);
+
+        // just renders user image for now... have to change some default
+        // settings like background-color(displays black)  
+        $("#imgCopy").attr("src", image)
+    })
+ });
+
+
+
+
 
 // Keep everything in anonymous function, called on window load.
 if(window.addEventListener) {
