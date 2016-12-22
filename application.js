@@ -2,18 +2,29 @@
  * http://www.robodesign.ro
  */
  $(document).ready(function() {
+       $("#catagory").hide()
+   //array would be response from server
+var catagory=
+["Being in Fire", "Old People", "A Tiny Horse", "Barak Obama",
+"Patrick (From DBC)", "Darth Vader", "Prancing", "The Amish", "The Pope",
+"Melting Pot", "Angry Fruit", "Drunk Guitar Guy", "The Muscles of Brussels",
+"Sunny's New Glasses", "Black Christmas", "Roman from Ukraine", "Alex After 3 Drinks at White Horse",
+"The Coach", "Favorite Positon", "You as a Super Villian", "Nickelback", "Narwal Shaking Albert's Hand"]
 
-    $(".button").on("click", function(){
-      event.preventDefault()
-        var canvas = document.getElementById("imageView");
-        // line 11 returns user's image as dataURI... could just send to server
-        // and save in DB
-        var image = canvas.toDataURL("image/jpeg", 1.0);
+$("#catagory").html(catagory[Math.floor(Math.random()*catagory.length)])
 
-        // just renders user image for now... have to change some default
-        // settings like background-color(displays black)
-        $("#imgCopy").attr("src", image)
-    })
+//when start gaem button is pressed clock is displayed
+  var clock;
+  $("#start-button").on("click",function() {
+    $("#catagory").show()
+    clock = $('.clock').FlipClock({
+          clockFace: 'MinuteCounter'
+        });
+  });
+
+
+
+
  });
 
 
@@ -76,8 +87,8 @@ window.addEventListener('load', function () {
       if (tool.started) {
         context.lineTo(ev._x, ev._y);
         context.stroke();
-        context.strokeStyle = 'red'
-        context.lineWidth = 10;
+        context.strokeStyle ='red'
+        context.lineWidth = 5;
       }
     };
 
