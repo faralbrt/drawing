@@ -2,19 +2,25 @@
  * http://www.robodesign.ro
  */
  $(document).ready(function() {
+       $("#catagory").hide()
    //array would be response from server
-var catagory=["Being in Fire", "Old People", "A Tiny Horse", "Barak Obama",
-"Patrick (From DBC)", "Darth Vader", "Prancing", "The Amish", "The Pope", "Melting Pot", "Angry Fruit", "Drunk Guitar Guy"]
+var catagory=
+["Being in Fire", "Old People", "A Tiny Horse", "Barak Obama",
+"Patrick (From DBC)", "Darth Vader", "Prancing", "The Amish", "The Pope",
+"Melting Pot", "Angry Fruit", "Drunk Guitar Guy", "The Muscles of Brussels",
+"Sunny's New Glasses", "Black Christmas", "Roman from Ukraine", "Alex After 3 Drinks at White Horse",
+"The Coach", "Favorite Positon", "You as a Super Villian", "Nickelback", "Narwal Shaking Albert's Hand"]
+
 $("#catagory").html(catagory[Math.floor(Math.random()*catagory.length)])
 
-
 //when start gaem button is pressed clock is displayed
-var clock;
-$("#start-button").on("click",function() {
-  clock = $('.clock').FlipClock({
-        clockFace: 'MinuteCounter'
-    });
-});
+  var clock;
+  $("#start-button").on("click",function() {
+    $("#catagory").show()
+    clock = $('.clock').FlipClock({
+          clockFace: 'MinuteCounter'
+        });
+  });
 
 
 
@@ -81,7 +87,7 @@ window.addEventListener('load', function () {
       if (tool.started) {
         context.lineTo(ev._x, ev._y);
         context.stroke();
-        context.strokeStyle = 'red'
+        context.strokeStyle ='red'
         context.lineWidth = 5;
       }
     };
