@@ -2,18 +2,23 @@
  * http://www.robodesign.ro
  */
  $(document).ready(function() {
+   //array would be response from server
+var catagory=["Being in Fire", "Old People", "A Tiny Horse", "Barak Obama",
+"Patrick (From DBC)", "Darth Vader", "Prancing", "The Amish", "The Pope", "Melting Pot", "Angry Fruit", "Drunk Guitar Guy"]
+$("#catagory").html(catagory[Math.floor(Math.random()*catagory.length)])
 
-    $(".button").on("click", function(){
-      event.preventDefault()
-        var canvas = document.getElementById("imageView");
-        // line 11 returns user's image as dataURI... could just send to server
-        // and save in DB
-        var image = canvas.toDataURL("image/jpeg", 1.0);
 
-        // just renders user image for now... have to change some default
-        // settings like background-color(displays black)
-        $("#imgCopy").attr("src", image)
-    })
+//when start gaem button is pressed clock is displayed
+var clock;
+$("#start-button").on("click",function() {
+  clock = $('.clock').FlipClock({
+        clockFace: 'MinuteCounter'
+    });
+});
+
+
+
+
  });
 
 
@@ -77,7 +82,7 @@ window.addEventListener('load', function () {
         context.lineTo(ev._x, ev._y);
         context.stroke();
         context.strokeStyle = 'red'
-        context.lineWidth = 10;
+        context.lineWidth = 5;
       }
     };
 

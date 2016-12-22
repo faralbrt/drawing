@@ -5,21 +5,28 @@
     <title>Canvas Paint - Example 2</title>
     <style type="text/css">#container { position: relative; }
         #imageView { border: 1px solid #000; }</style>
+        <link rel="stylesheet" type="text/css" href="public/application.css">
+        	<link rel="stylesheet" href="clock/compiled/flipclock.css">
   </head>
 
-    <body>
-      <a href="http://stackoverflow.com/questions/14357083/how-can-users-draw-and-save-images-within-a-website">Learn More</a>
-      <p>Hold down the mouse button to draw in the rectangle below.</p>
-      <div id="container"><canvas id="imageView" width="400" height="300">
+  <body>
+
+    <div class="clock" style="margin:2em;"></div>
+    <div class="message"></div>
+
+      <button type="submit" id="start-button"> Start Game </button>
+      <p id="catagory"></p>
+      <div id="container"><canvas id="imageView" width="800" height="550">
       </canvas>
       </div>
       <button type="submit" class="button"> Finish Drawing </button>
 
-<div id="img">
-<img id="imgCopy" src="">
-</div>
+        <div id="img">
+          <img id="imgCopy" src="">
+        </div>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>      <script type="text/javascript" src="application.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+       <script src="clock/compiled/flipclock.js"></script>
+      <script type="text/javascript" src="application.js"></script>
     </body>
 </html>
