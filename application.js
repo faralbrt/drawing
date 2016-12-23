@@ -7,11 +7,13 @@
        $("#refresh-page-button").hide()
    //array would be response from server
 var catagory=
-["Being in Fire", "Old People", "A Tiny Horse", "Barack Obama",
-"Patrick (From DBC)", "Darth Vader", "Prancing", "The Amish", "The Pope",
-"Melting Pot", "Angry Fruit", "Drunk Guitar Guy", "The Muscles of Brussels",
-"Sunny's New Glasses", "Black Christmas", "Roman from Ukraine", "Alex After 2.5 Drinks at White Horse",
-"The Coach", "Favorite Positon", "You as a Super Villian", "Nickelback", "Narwal Shaking Albert's Hand"]
+["Being in Fire", "A Tiny Horse", "Barack Obama","Patrick (From DBC)",
+ "Darth Vader", "An Amish Woman", "Angry Fruit", "The Muscles of Brussels",
+"Sunny's New Glasses","Black Christmas", "Roman from Ukraine",
+"Alex After 3.5 Drinks at White Horse","The Coach", "You as a Super Villian",
+ "Nickelback", "First Pump", "Phil From DBC Wearing an Orange Yamaka", "Steve Jobs",
+"Alex From DBC Crying For Joy","Alex From DBC Proposing to Joy",
+ "Alexandra reading off racist tweets", "Alex with a three colored mustache" ]
 
 $("#catagory").html(catagory[Math.floor(Math.random()*catagory.length)])
 
