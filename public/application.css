@@ -1,13 +1,18 @@
 body{
   width : 100%;
 }
-
+#start-button{
+  width: 120px;
+  height: 25px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+}
 .class-wrapper{
   margin: auto;
 }
-}
+
 #imgCopy{
-  border:1px solid #021a40;
+  border: 1px solid;
 }
 
 #catagory{

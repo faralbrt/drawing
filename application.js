@@ -18,6 +18,7 @@ $("#catagory").html(catagory[Math.floor(Math.random()*catagory.length)])
 //when start gaem button is pressed clock is displayed
   var clock;
   $("#start-button").on("click",function() {
+    $("#start-button").hide()
     $("#catagory").show()
     clock = $('.clock').FlipClock({
           clockFace: 'MinuteCounter'
