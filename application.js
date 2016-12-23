@@ -78,12 +78,18 @@ window.addEventListener('load', function () {
               context.strokeStyle ='black'}
       else if (tableColor.attr("id") === "color-red"){
               context.strokeStyle ='red'}
-      else if (tableColor.attr("id") === "color-yellow"){
-              context.strokeStyle ='yellow'}
+      else if (tableColor.attr("id") === "color-purple"){
+              context.strokeStyle ='purple'}
       else if (tableColor.attr("id") === "color-blue"){
               context.strokeStyle ='blue'}
       else if (tableColor.attr("id") === "color-green"){
               context.strokeStyle ='green'}
+      else if (tableColor.attr("id") === "color-light-blue"){
+              context.strokeStyle = "#43E9FD"}
+      else if (tableColor.attr("id") === "color-yellow"){
+              context.strokeStyle ='yellow'}
+      else if (tableColor.attr("id") === "color-orange"){
+              context.strokeStyle ='orange'}
       else if (tableColor.attr("id") === "erase"){
               context.strokeStyle ='white'}
     })

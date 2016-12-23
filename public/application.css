@@ -1,3 +1,11 @@
+body{
+  width : 100%;
+}
+
+.class-wrapper{
+  margin: auto;
+}
+}
 #imgCopy{
   border:1px solid #021a40;
 }
@@ -24,6 +32,9 @@ a:not([href]) {
 #color-red{
   background-color: red;
 }
+#color-purple{
+  background-color: purple;
+}
 #color-yellow{
     background-color: yellow;
 }
@@ -33,26 +44,36 @@ a:not([href]) {
 #color-blue{
     background-color: blue;
 }
+#color-light-blue{
+    background-color: #43E9FD;
+}
 #color-green{
     background-color: green;
 }
-
+#color-orange{
+    background-color: orange;
+}
 #color-black{
     background-color: black;
 }
 
 #erase{
-  background-size: 39px 41px;
+  background-size: 45px 50px;
   background-image: url("eraser.jpg");
 }
 
 table{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 100px;
+}
+tr{
   border: 1px solid;
-  width:250px;
-  height:50px;
+  width:35;
+  height:40px;
 }
 td{
   border: 1px solid;
-    width:60px;
-    height:40px;
+    width:34px;
+    height:35px;
 }
