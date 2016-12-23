@@ -514,19 +514,19 @@ var FlipClock;
 			this.factory.time.addSecond();
 			//added---> stops clock @ 30 seconds
 			if(this.factory.time.getTimeSeconds() === 31) {
+				setTimeout(function(){
+					$("#container").hide()}, 970);
 					setTimeout(function(){
-
 						var canvas = document.getElementById("imageView");
-						// line 11 returns user's image as dataURI... could just send to server
-						// and save in DB
 						var image = canvas.toDataURL("image/png", 1.0);
-
-						// just renders user image for now... have to change some default
-						// settings like background-color(displays black)
-						$("#imgCopy").attr("src", image)}, 1000);
+						// stores user's image as dataURI..
+						$("#imgCopy").attr("src", image)
+						$("#refresh-page-button").show()
+						$("#downloadLnk").show()}, 1000);
 	        this.factory.stop()
 			}
 		},
+
 
 
 

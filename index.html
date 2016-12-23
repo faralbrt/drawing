@@ -16,15 +16,26 @@
 
       <button type="submit" id="start-button"> Start Game </button>
       <p id="catagory"></p>
-      <div id="container"><canvas id="imageView" width="950px" height="500px">
-      </canvas>
+      <div id="container">
+        <canvas id="imageView" width="950px" height="500px"></canvas>
+        <table id="change-color">
+          <tr>
+            <td id ="color-black"> </td>
+            <td id ="color-red"> </td>
+            <td id ="color-yellow"> </td>
+            <td id ="color-blue"> </td>
+            <td id ="color-green"> </td>
+            <td id ="erase"> </td>
+          </tr>
+        </table>
       </div>
         <!-- <button type="submit" class="button"> Finish Drawing </button>  -->
 
         <div id="img">
-          <img id="imgCopy" src="">
+          <img id="imgCopy" name ="imgCopy" src="">
+          <a id="downloadLnk" download="image.png"> Download</a>
+          <button id="refresh-page-button"> Play Again </button>
         </div>
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
        <script src="clock/compiled/flipclock.js"></script>
       <script type="text/javascript" src="application.js"></script>

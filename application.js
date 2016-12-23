@@ -3,12 +3,14 @@
  */
  $(document).ready(function() {
        $("#catagory").hide()
+       $("#downloadLnk").hide()
+       $("#refresh-page-button").hide()
    //array would be response from server
 var catagory=
-["Being in Fire", "Old People", "A Tiny Horse", "Barak Obama",
+["Being in Fire", "Old People", "A Tiny Horse", "Barack Obama",
 "Patrick (From DBC)", "Darth Vader", "Prancing", "The Amish", "The Pope",
 "Melting Pot", "Angry Fruit", "Drunk Guitar Guy", "The Muscles of Brussels",
-"Sunny's New Glasses", "Black Christmas", "Roman from Ukraine", "Alex After 3 Drinks at White Horse",
+"Sunny's New Glasses", "Black Christmas", "Roman from Ukraine", "Alex After 2.5 Drinks at White Horse",
 "The Coach", "Favorite Positon", "You as a Super Villian", "Nickelback", "Narwal Shaking Albert's Hand"]
 
 $("#catagory").html(catagory[Math.floor(Math.random()*catagory.length)])
@@ -22,12 +24,24 @@ $("#catagory").html(catagory[Math.floor(Math.random()*catagory.length)])
         });
   });
 
+  $("#downloadLnk").on("click",function(){
+    var getImageSrc =$("#imgCopy").attr("src");
+      var openNewWindow =window.open('about:blank','image from canvas');
+      openNewWindow.document.write("<p>Catagory: " +$("#catagory").text()+"</p>")
+      openNewWindow.document.write("<img border='2' src="+getImageSrc+">")
+  })
 
+  $('#refresh-page-button').click(function() {
+    location.reload();
+    });
+//ends $(document).ready
+});
 
-
- });
-
-
+ function download() {
+    var imageSrc= $("#imgCopy").attr("src")
+     this.href = imageSrc;
+ };
+ downloadLnk.addEventListener('click', download, false);
 
 
 
@@ -55,6 +69,24 @@ window.addEventListener('load', function () {
       alert('Error: failed to getContext!');
       return;
     }
+
+    //changes color of stroke
+    $("#change-color").on("click",function(){
+      event.preventDefault();
+      var tableColor = $(event.target)
+      if (tableColor.attr("id") === "color-black"){
+              context.strokeStyle ='black'}
+      else if (tableColor.attr("id") === "color-red"){
+              context.strokeStyle ='red'}
+      else if (tableColor.attr("id") === "color-yellow"){
+              context.strokeStyle ='yellow'}
+      else if (tableColor.attr("id") === "color-blue"){
+              context.strokeStyle ='blue'}
+      else if (tableColor.attr("id") === "color-green"){
+              context.strokeStyle ='green'}
+      else if (tableColor.attr("id") === "erase"){
+              context.strokeStyle ='white'}
+    })
 
     // Pencil tool instance.
     tool = new tool_pencil();
@@ -87,7 +119,6 @@ window.addEventListener('load', function () {
       if (tool.started) {
         context.lineTo(ev._x, ev._y);
         context.stroke();
-        context.strokeStyle ='red'
         context.lineWidth = 5;
       }
     };
@@ -122,5 +153,6 @@ window.addEventListener('load', function () {
   init();
 
 }, false); }
+
 
 // vim:set spell spl=en fo=wan1croql tw=80 ts=2 sw=2 sts=2 sta et ai cin fenc=utf-8 ff=unix:
